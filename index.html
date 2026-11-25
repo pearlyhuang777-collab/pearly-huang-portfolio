@@ -1,28 +1,27 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pearly Huang — Academic & Professional Portfolio. A journey across languages, education and cultures.">
+  <meta name="description" content="Pearly Huang — Personal Portfolio">
   <meta name="theme-color" content="#f5f2ec">
-  <title>Pearly Huang — A World of Languages & Cultures</title>
+  <title>黄亚茹 Pearly Huang — Personal Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="announcement">
     <span data-i18n="announcement">A JOURNEY ACROSS LANGUAGES, EDUCATION & CULTURES</span>
-    <span class="announcement-mark">✳</span>
+    <span>✳</span>
     <span>PORTFOLIO · 2026</span>
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Pearly Huang home">
+    <a class="brand" href="#home">
       <span class="brand-name">Pearly Huang<span class="brand-dot">.</span></span>
       <span class="brand-caption">PERSONAL PORTFOLIO</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
       <span></span><span></span>
     </button>
 
@@ -31,8 +30,10 @@
       <a href="#teaching" data-i18n="navTeaching">Teaching</a>
       <a href="#experiences" data-i18n="navExperiences">Experiences</a>
       <a href="#projects" data-i18n="navProjects">Projects</a>
-      <a href="#awards" data-i18n="navAwards">Awards</a>
-      <div class="language-switch" aria-label="Language selection">
+      <a href="#awards" data-i18n="navAwards">Languages</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+
+      <div class="language-switch">
         <button class="lang-btn active" data-lang="EN">EN</button>
         <span>/</span>
         <button class="lang-btn" data-lang="简体">简</button>
@@ -43,19 +44,30 @@
   </header>
 
   <main>
+    <!-- HOME -->
     <section class="hero section-wrap" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">HELLO, I'M PEARLY</span></p>
-        <h1 data-i18n="heroTitle">A World of<br><em>Languages</em><br>& Cultures<span class="title-period">.</span></h1>
+        <p class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span data-i18n="heroEyebrow">HELLO, I'M PEARLY</span>
+        </p>
+
+        <h1 data-i18n="heroTitle">
+          你好，我是<br><em>黄亚茹</em><br>Pearly Huang<span class="title-period">.</span>
+        </h1>
+
         <p class="hero-description" data-i18n="heroDescription">
           Exploring the connections between language, education and culture — one experience at a time.
         </p>
+
         <div class="hero-actions">
           <a class="button button-dark" href="#about">
-            <span data-i18n="discoverMore">Discover my story</span><span class="button-arrow">↗</span>
+            <span data-i18n="discoverMore">Discover my story</span>
+            <span class="button-arrow">↗</span>
           </a>
           <a class="text-link" href="#projects" data-i18n="exploreWorks">Explore selected works ↗</a>
         </div>
+
         <div class="hero-footnote">
           <span>31° N · 120° E</span>
           <span data-i18n="heroFootnote">Curious about the world, grounded in words.</span>
@@ -63,33 +75,23 @@
       </div>
 
       <div class="hero-visual">
-    <div class="hero-paper paper-back"></div>
-
-    <div class="hero-paper paper-front">
-        <div class="photo-placeholder hero-photo">
-            <img
-                src="./assets/profile.jpg"
-                alt="Pearly Huang"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;"
-            >
+        <div class="globe-area" id="globeArea">
+          <canvas id="globeCanvas" aria-label="Interactive globe"></canvas>
+          <div class="globe-caption" data-i18n="globeCaption">A WORLD OF POSSIBILITIES</div>
         </div>
 
-        <div class="paper-note">
-            <span class="note-star">✳</span>
-            <span data-i18n="heroNote">
-                Learning to see<br>the world differently.
-            </span>
-        </div>
-
-        <span class="paper-index">PH—001</span>
-    </div>
-</div>
+        <div class="hero-paper paper-back"></div>
+        <div class="hero-paper paper-front">
+          <div class="photo-placeholder hero-photo">
+            <img src="./assets/profile.jpg" alt="Pearly Huang">
+          </div>
           <div class="paper-note">
             <span class="note-star">✳</span>
             <span data-i18n="heroNote">Learning to see<br>the world differently.</span>
           </div>
           <span class="paper-index">PH—001</span>
         </div>
+
         <div class="hero-sticker">LANGUAGE<br>× CULTURE<br>× PEOPLE</div>
         <div class="hero-side-label">A PERSONAL JOURNEY · EST. 2007</div>
       </div>
@@ -102,6 +104,7 @@
       <span data-i18n="introStrip2">IT IS A BRIDGE BETWEEN PEOPLE, PERSPECTIVES AND CULTURES.</span>
     </section>
 
+    <!-- ABOUT -->
     <section class="content-section section-wrap" id="about">
       <div class="section-heading">
         <div>
@@ -114,27 +117,52 @@
       <div class="about-grid">
         <div class="about-image-column">
           <div class="photo-placeholder about-photo">
-            <span class="placeholder-cross">＋</span>
-            <span data-i18n="aboutPhotoPlaceholder">PERSONAL PHOTO<br>OR A MOMENT FROM YOUR JOURNEY</span>
-            <small>IMAGE 02 / ABOUT</small>
+            <img src="./assets/profile.jpg" alt="Pearly Huang portrait">
           </div>
           <p class="handwritten" data-i18n="aboutHandwritten">Always learning, always becoming.</p>
         </div>
+
         <div class="about-text">
+          <div class="personal-info">
+            <div><span data-i18n="infoName">姓名</span><strong>黄亚茹 Pearly Huang</strong></div>
+            <div><span data-i18n="infoCity">常驻城市</span><strong data-i18n="infoCityValue">福建泉州 / 山东聊城</strong></div>
+            <div><span data-i18n="infoBirth">出生年月</span><strong data-i18n="infoBirthValue">2007年7月</strong></div>
+            <div><span>Email</span><strong><a href="mailto:pearlyhuang777@gmail.com">pearlyhuang777@gmail.com</a></strong></div>
+            <div><span data-i18n="infoUniversity">本科院校</span><strong data-i18n="infoUniversityValue">河北工程大学</strong></div>
+            <div><span data-i18n="infoMajor">专业</span><strong data-i18n="infoMajorValue">汉语国际教育</strong></div>
+          </div>
+
           <p class="large-lead" data-i18n="aboutLead">
             I am a Chinese language education student interested in how language brings people closer.
           </p>
+
           <p data-i18n="aboutParagraph">
             My academic journey has taken me through language learning, teaching practice, public speaking and intercultural experiences. I enjoy exploring how people communicate across different backgrounds, and how education can create meaningful connections.
           </p>
+
           <p data-i18n="aboutParagraph2">
             This portfolio is a growing record of what I have learned, what I have created and the directions I hope to explore next.
           </p>
-          <div class="about-facts">
-            <div><span class="fact-number">01</span><span data-i18n="factEducation">Chinese Language Education</span></div>
-            <div><span class="fact-number">02</span><span data-i18n="factInterest">Intercultural Communication</span></div>
-            <div><span class="fact-number">03</span><span data-i18n="factFocus">Language & Digital Learning</span></div>
+
+          <div class="talent-block">
+            <h3 data-i18n="talentTitle">Talents & Interests</h3>
+            <div class="talent-tags">
+              <span data-i18n="talent1">中国古典舞</span>
+              <span data-i18n="talent2">中国民族舞</span>
+              <span data-i18n="talent3">钢琴</span>
+              <span data-i18n="talent4">陶笛</span>
+              <span data-i18n="talent5">吉他</span>
+              <span data-i18n="talent6">油画</span>
+              <span data-i18n="talent7">水粉</span>
+              <span data-i18n="talent8">国画</span>
+              <span data-i18n="talent9">毛笔书法</span>
+              <span data-i18n="talent10">演讲</span>
+              <span data-i18n="talent11">主持</span>
+              <span data-i18n="talent12">国际象棋</span>
+              <span data-i18n="talent13">话剧表演</span>
+            </div>
           </div>
+
           <a class="text-link" href="#experiences" data-i18n="aboutLink">Explore my experiences ↗</a>
         </div>
       </div>
@@ -147,6 +175,7 @@
       <span class="quote-decoration">PERSPECTIVE · EMPATHY · CONNECTION</span>
     </section>
 
+    <!-- TEACHING -->
     <section class="content-section section-wrap" id="teaching">
       <div class="section-heading">
         <div>
@@ -155,6 +184,7 @@
         </div>
         <span class="section-index">02—08</span>
       </div>
+
       <p class="section-intro" data-i18n="teachingIntro">
         Exploring the practice of teaching Chinese as an additional language through observation, preparation and reflection.
       </p>
@@ -169,7 +199,6 @@
           <div class="card-meta"><span>01</span><span data-i18n="teachingMeta1">CLASSROOM EXPERIENCE</span></div>
           <h3 data-i18n="teachingCard1">Classroom Observation</h3>
           <p data-i18n="teachingCard1Text">Observing Chinese language lessons and reflecting on classroom interaction, teaching approaches and learner engagement.</p>
-          <span class="card-bottom-label" data-i18n="placeholderContent">CONTENT TO BE ADDED</span>
         </article>
 
         <article class="editorial-card">
@@ -181,7 +210,6 @@
           <div class="card-meta"><span>02</span><span data-i18n="teachingMeta2">TEACHING DESIGN</span></div>
           <h3 data-i18n="teachingCard2">Lesson Planning</h3>
           <p data-i18n="teachingCard2Text">A collection of lesson plans, learning activities and teaching materials developed through coursework and practice.</p>
-          <span class="card-bottom-label" data-i18n="placeholderContent">CONTENT TO BE ADDED</span>
         </article>
 
         <article class="editorial-card">
@@ -193,11 +221,11 @@
           <div class="card-meta"><span>03</span><span data-i18n="teachingMeta3">REFLECTION & GROWTH</span></div>
           <h3 data-i18n="teachingCard3">Teaching Reflection</h3>
           <p data-i18n="teachingCard3Text">Notes on teaching practice, learner needs, classroom communication and the process of becoming an educator.</p>
-          <span class="card-bottom-label" data-i18n="placeholderContent">CONTENT TO BE ADDED</span>
         </article>
       </div>
     </section>
 
+    <!-- EXPERIENCES -->
     <section class="experience-section" id="experiences">
       <div class="section-wrap">
         <div class="section-heading light-heading">
@@ -207,6 +235,7 @@
           </div>
           <span class="section-index">03—08</span>
         </div>
+
         <p class="section-intro light-intro" data-i18n="experienceIntro">
           Encounters with new places and perspectives have shaped the way I understand communication, learning and the world.
         </p>
@@ -254,130 +283,147 @@
       </div>
     </section>
 
+    <!-- CERTIFICATES -->
     <section class="content-section section-wrap" id="projects">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">04 / <span data-i18n="projectsLabel">IDEAS INTO ACTION</span></p>
-          <h2 data-i18n="projectsTitle">Selected <em>works.</em></h2>
+          <p class="eyebrow">04 / <span data-i18n="projectsLabel">MILESTONES & ACHIEVEMENTS</span></p>
+          <h2 data-i18n="projectsTitle">Honors & <em>certificates.</em></h2>
         </div>
         <span class="section-index">04—08</span>
       </div>
+
       <p class="section-intro" data-i18n="projectsIntro">
-        A selection of academic projects, communication experiences and creative work.
+        A collection of certificates and recognitions from academic competitions and other activities.
       </p>
 
-      <div class="project-grid">
-        <article class="project-card project-featured">
-          <div class="project-image photo-placeholder">
-            <span class="placeholder-cross">＋</span>
-            <span data-i18n="projectImage1">ENGLISH SPEECH<br>COMPETITION</span>
-            <small>PROJECT 01 / IMAGE</small>
-          </div>
-          <div class="project-info">
-            <p class="card-meta"><span>01</span><span data-i18n="projectType1">PUBLIC SPEAKING</span></p>
-            <h3 data-i18n="project1Title">Stories of China Retold in English</h3>
-            <p data-i18n="project1Text">A provincial first-prize experience in sharing Chinese stories through English-language communication.</p>
-            <span class="project-result" data-i18n="project1Result">PROVINCIAL FIRST PRIZE</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image photo-placeholder image-tint-rose">
-            <span class="placeholder-cross">＋</span>
-            <span data-i18n="projectImage2">DEBATE<br>& DISCUSSION</span>
-            <small>PROJECT 02 / IMAGE</small>
-          </div>
-          <div class="project-info">
-            <p class="card-meta"><span>02</span><span data-i18n="projectType2">DEBATE</span></p>
-            <h3 data-i18n="project2Title">English Debate Competition</h3>
-            <p data-i18n="project2Text">Developing argumentation, critical thinking and the ability to communicate ideas in English.</p>
-            <span class="project-result" data-i18n="project2Result">CAMPUS FIRST PRIZE</span>
+      <div class="certificate-grid">
+        <article class="certificate-card">
+          <button class="certificate-image" data-image="assets/certificates/award1.jpg" aria-label="View certificate">
+            <img src="assets/certificates/award1.jpg" alt="Stories of China Retold in English certificate">
+            <span class="certificate-zoom">↗</span>
+          </button>
+          <div class="certificate-info">
+            <p class="certificate-category">01 · ENGLISH COMMUNICATION</p>
+            <h3 data-i18n="award1">Stories of China Retold in English</h3>
+            <p data-i18n="certificate1Level">Provincial First Prize</p>
+            <span data-i18n="certificate1Issuer">Issuing institution: Add institution</span>
+            <small data-i18n="certificate1Year">Year: Add year</small>
           </div>
         </article>
 
-        <article class="project-card">
-          <div class="project-image photo-placeholder image-tint-green">
-            <span class="placeholder-cross">＋</span>
-            <span data-i18n="projectImage3">SHORT VIDEO<br>PRODUCTION</span>
-            <small>PROJECT 03 / IMAGE</small>
+        <article class="certificate-card">
+          <button class="certificate-image" data-image="assets/certificates/award2.jpg" aria-label="View certificate">
+            <img src="assets/certificates/award2.jpg" alt="English debate certificate">
+            <span class="certificate-zoom">↗</span>
+          </button>
+          <div class="certificate-info">
+            <p class="certificate-category">02 · DEBATE</p>
+            <h3 data-i18n="award2">English Debate Competition</h3>
+            <p data-i18n="certificate2Level">Campus First Prize</p>
+            <span data-i18n="certificate2Issuer">Issuing institution: Add institution</span>
+            <small data-i18n="certificate2Year">Year: Add year</small>
           </div>
-          <div class="project-info">
-            <p class="card-meta"><span>03</span><span data-i18n="projectType3">DIGITAL STORYTELLING</span></p>
-            <h3 data-i18n="project3Title">English Short Video</h3>
-            <p data-i18n="project3Text">Using visual storytelling and English communication to present ideas in a concise and engaging format.</p>
-            <span class="project-result" data-i18n="project3Result">SCHOOL FIRST · CITY SECOND</span>
+        </article>
+
+        <article class="certificate-card">
+          <button class="certificate-image" data-image="assets/certificates/award3.jpg" aria-label="View certificate">
+            <img src="assets/certificates/award3.jpg" alt="Cross-cultural competition certificate">
+            <span class="certificate-zoom">↗</span>
+          </button>
+          <div class="certificate-info">
+            <p class="certificate-category">03 · INTERCULTURAL COMMUNICATION</p>
+            <h3 data-i18n="award3">Cross-cultural Communication Competition</h3>
+            <p data-i18n="certificate3Level">Provincial Third Prize</p>
+            <span data-i18n="certificate3Issuer">Issuing institution: Add institution</span>
+            <small data-i18n="certificate3Year">Year: Add year</small>
+          </div>
+        </article>
+
+        <article class="certificate-card">
+          <button class="certificate-image" data-image="assets/certificates/award4.jpg" aria-label="View certificate">
+            <img src="assets/certificates/award4.jpg" alt="Scholarship certificate">
+            <span class="certificate-zoom">↗</span>
+          </button>
+          <div class="certificate-info">
+            <p class="certificate-category">04 · ACADEMIC ACHIEVEMENT</p>
+            <h3 data-i18n="award4">Academic Scholarship</h3>
+            <p data-i18n="certificate4Level">University Second-Class Scholarship</p>
+            <span data-i18n="certificate4Issuer">Issuing institution: Add institution</span>
+            <small data-i18n="certificate4Year">Year: Add year</small>
           </div>
         </article>
       </div>
+
+      <p class="small-note" data-i18n="certificateNote">
+        Replace the sample image paths with your own certificate images.
+      </p>
     </section>
 
-    <section class="digital-section">
+    <!-- HANIVERSE -->
+    <section class="digital-section" id="haniverse">
       <div class="section-wrap digital-grid">
         <div>
           <p class="eyebrow">05 / <span data-i18n="digitalLabel">THE FUTURE OF LEARNING</span></p>
-          <h2 data-i18n="digitalTitle">Digital learning<br>& <em>new possibilities.</em></h2>
+          <h2>Haniverse<br><em>汉语万象.</em></h2>
+          <p class="haniverse-subtitle" data-i18n="haniverseSubtitle">A universe of Chinese language teaching and learning.</p>
         </div>
+
         <div class="digital-copy">
-          <p data-i18n="digitalText">I am interested in how digital tools and artificial intelligence can support language education, encourage critical thinking and make learning more engaging.</p>
+          <p data-i18n="haniverseText">
+            Haniverse is a digital platform concept designed for international Chinese language educators. It brings together teaching resources, lesson planning, classroom tools and creative ideas in one shared space.
+          </p>
+
           <div class="digital-tags">
-            <span>AI & EDUCATION</span>
-            <span>DIGITAL TOOLS</span>
-            <span>CRITICAL THINKING</span>
+            <span>CHINESE EDUCATION</span>
+            <span>DIGITAL RESOURCES</span>
+            <span>EDTECH</span>
           </div>
-          <p class="small-note" data-i18n="digitalNote">A space for experiments, reflections and future projects.</p>
+
+          <a class="button button-dark haniverse-link" href="#" target="_blank" rel="noopener" data-i18n="haniverseButton">
+            Explore Haniverse ↗
+          </a>
+
+          <p class="small-note" data-i18n="haniverseNote">An ongoing independent project.</p>
         </div>
       </div>
     </section>
 
+    <!-- LANGUAGES -->
     <section class="content-section section-wrap" id="awards">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">06 / <span data-i18n="awardsLabel">MILESTONES & SKILLS</span></p>
-          <h2 data-i18n="awardsTitle">Recognition & <em>languages.</em></h2>
+          <p class="eyebrow">06 / <span data-i18n="awardsLabel">LANGUAGE & COMMUNICATION</span></p>
+          <h2 data-i18n="awardsTitle">Languages & <em>communication.</em></h2>
         </div>
         <span class="section-index">06—08</span>
       </div>
 
-      <div class="awards-language-grid">
-        <div class="awards-column">
-          <h3 class="subsection-title" data-i18n="awardsSubheading">Selected Recognition</h3>
-          <div class="award-row">
-            <span class="award-year">01</span>
-            <div><strong data-i18n="award1">Stories of China Retold in English</strong><small data-i18n="award1Detail">Provincial First Prize</small></div>
-            <span class="award-star">✳</span>
-          </div>
-          <div class="award-row">
-            <span class="award-year">02</span>
-            <div><strong data-i18n="award2">English Debate Competition</strong><small data-i18n="award2Detail">Campus First Prize</small></div>
-            <span class="award-star">✳</span>
-          </div>
-          <div class="award-row">
-            <span class="award-year">03</span>
-            <div><strong data-i18n="award3">English Short Video Competition</strong><small data-i18n="award3Detail">School First Prize · City Second Prize</small></div>
-            <span class="award-star">✳</span>
-          </div>
-          <p class="small-note" data-i18n="awardsNote">Certificates and supporting documents can be added here.</p>
-        </div>
-
-        <div class="languages-column">
-          <h3 class="subsection-title" data-i18n="languagesSubheading">Languages</h3>
-          <div class="language-item"><span>中文</span><span data-i18n="languageNative">Native</span></div>
-          <div class="language-item"><span>English</span><span data-i18n="languageEnglish">Academic & everyday communication</span></div>
-          <div class="language-item"><span>Français</span><span data-i18n="languageFrench">Learning in progress</span></div>
-          <div class="language-item"><span>日本語</span><span data-i18n="languageJapanese">Learning in progress</span></div>
-          <p class="small-note" data-i18n="languageNote">Language descriptions reflect current learning experience, not formal proficiency certification.</p>
-        </div>
+      <div class="languages-only">
+        <div class="language-item"><span>中文</span><span data-i18n="languageNative">Native</span></div>
+        <div class="language-item"><span>English</span><span data-i18n="languageEnglish">Academic & everyday communication</span></div>
+        <div class="language-item"><span>Français</span><span data-i18n="languageFrench">Learning in progress</span></div>
+        <div class="language-item"><span>日本語</span><span data-i18n="languageJapanese">Learning in progress</span></div>
+        <p class="small-note" data-i18n="languageNote">
+          Language descriptions reflect current learning experience, not formal proficiency certification.
+        </p>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact-section" id="contact">
       <div class="section-wrap contact-inner">
         <p class="eyebrow">07 / <span data-i18n="contactLabel">LET'S CONNECT</span></p>
         <h2 data-i18n="contactTitle">Every connection<br>begins with <em>a conversation.</em></h2>
-        <p data-i18n="contactText">Thank you for taking the time to explore my portfolio. I look forward to learning, sharing and connecting across cultures.</p>
-        <a class="button button-light" href="mailto:YOUR-EMAIL@example.com">
-          <span data-i18n="contactButton">Get in touch</span><span class="button-arrow">↗</span>
-        </a>
+        <p data-i18n="contactText">
+          Thank you for taking the time to explore my portfolio. I look forward to learning, sharing and connecting across cultures.
+        </p>
+
+        <button class="button button-light" id="contactOpen">
+          <span data-i18n="contactButton">Get in touch</span>
+          <span class="button-arrow">↗</span>
+        </button>
+
         <span class="contact-decoration">PEARLY HUANG · 2026</span>
       </div>
     </section>
@@ -389,16 +435,26 @@
     <a href="#home" data-i18n="backTop">BACK TO TOP ↑</a>
   </footer>
 
+  <!-- CERTIFICATE LIGHTBOX -->
+  <div class="lightbox" id="certificateLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImage" src="" alt="Certificate enlarged">
+  </div>
+
+  <!-- CONTACT POPUP -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true">
+    <div class="contact-modal-content">
+      <button class="modal-close" id="contactClose" aria-label="Close">×</button>
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2 data-i18n="modalTitle">Get in touch.</h2>
+      <p data-i18n="modalDescription">Feel free to reach out by email.</p>
+      <a class="modal-email" href="mailto:pearlyhuang777@gmail.com">pearlyhuang777@gmail.com</a>
+      <button class="copy-email" id="copyEmail" data-i18n="copyEmail">Copy email address</button>
+      <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+    </div>
+  </div>
+
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
-/* Homepage portrait adjustment */
-.hero-photo img {
-    width: 85% !important;
-    height: 85% !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    display: block !important;
-    margin: auto !important;
-}
